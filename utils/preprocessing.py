@@ -18,7 +18,10 @@ def chat(input_message):
     model, tokenizer = load_model()
 
     # Tokenize the input message
-    input_ids = tokenizer.encode(input_message, return_tensors="pt")
+    input_ids = tokenizer.encode(input_message, 
+        return_tensors="pt", 
+        padding=True, 
+        truncation=True)
 
     # Generate a response from the model
     output = model.generate(input_ids, max_length=100)
