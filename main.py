@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from transformers import AutoModelForCausalLM, AutoTokenizer
-import joblib
-import os
+from utils.preprocessing import load_model
+
 
 app = Flask(__name__)
 
