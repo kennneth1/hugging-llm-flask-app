@@ -1,12 +1,9 @@
 from flask import Flask, request, jsonify
 from transformers import AutoModelForCausalLM, AutoTokenizer
+import joblib
+import os
 
 app = Flask(__name__)
-
-# Load the pretrained DialoGPT model and tokenizer
-model_name = "microsoft/DialoGPT-medium"
-model = AutoModelForCausalLM.from_pretrained(model_name)
-tokenizer = AutoTokenizer.from_pretrained(model_name)
 
 # Define a route for generating responses
 @app.route("/chatbot", methods=["POST"])
