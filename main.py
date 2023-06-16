@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request
 from utils.preprocessing import load_model, chat
 
 app = Flask(__name__)
@@ -13,7 +13,8 @@ def chatbot():
     input_message = request.json["message"]
 
     # Return response
-    chat(input_message)
+    response = chat(input_message)
+    return response
 
 # Run the Flask application
 if __name__ == "__main__":
