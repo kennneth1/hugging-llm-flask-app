@@ -10,7 +10,3 @@ venv/
 # Ignore IDE-specific files
 .idea/
 .vscode/
-
-# Ignore potential model directory
-model/
-models/

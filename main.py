@@ -1,9 +1,11 @@
 from flask import Flask, request, jsonify
-from transformers import AutoModelForCausalLM, AutoTokenizer
 from utils.preprocessing import load_model
 
 
 app = Flask(__name__)
+
+# cold load the model and tokenizer
+model, tokenizer = load_model()
 
 # Define a route for generating responses
 @app.route("/chatbot", methods=["POST"])
