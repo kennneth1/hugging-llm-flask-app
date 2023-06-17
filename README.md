@@ -18,11 +18,13 @@ This is a simple chatbot API built with Flask and HuggingFace's GPT-2 LLM, that 
 
 ## Getting Started
 
-1. Clone the repository: `git clone https://github.com/your-username/chatbot-api.git`
-2. Install the required dependencies: `pip install -r requirements.txt`
-3. Run the Flask application: `python main.py`
-4. Open your browser and navigate to `http://localhost:5000`
-5. Start chatting with the chatbot!
+1. Clone the repository: `git clone https://github.com/kennneth1/hugging-llm-flask-app.git`
+2. Navigate to root directory and initalize virtual env
+3. Install the required dependencies: `pip install -r requirements.txt`
+4. Set env var, for MacOS: `export FLASK_APP=main.py`
+5. Run the Flask application: `python main.py`
+6. Open your browser and navigate to `http://localhost:5000` or `http://127.0.0.1:5000`
+7. Start chatting with the chatbot!
 
 ## API Endpoints
 
