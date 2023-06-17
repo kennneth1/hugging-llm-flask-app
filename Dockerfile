@@ -1,17 +1,11 @@
 # Use the official Python base image
-FROM python:3.9-slim
+FROM python:3.9-rust
 
 # Set the working directory in the container
 WORKDIR /app
 
 # Copy the requirements file to the container
 COPY requirements.txt .
-
-# Install Rust
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-
-# Add Rust binaries to PATH
-ENV PATH="/root/.cargo/bin:${PATH}"
 
 # Install the required dependencies
 RUN pip install --no-cache-dir -r requirements.txt
