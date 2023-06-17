@@ -26,6 +26,10 @@ This is a simple chatbot API built with Flask and HuggingFace's GPT-2 LLM, that 
 6. Open your browser and navigate to `http://localhost:5000` or `http://127.0.0.1:5000`
 7. Start chatting with the chatbot!
 
+- docker build -t hugging-gpt2-flask-app .
+- docker run -p 5000:5000 hugging-gpt2-flask-app
+
+
 ## API Endpoints
 
 - `POST /api/chatbot`: Sends a user message to the chatbot and receives a response.
