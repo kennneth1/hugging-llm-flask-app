@@ -38,24 +38,11 @@ Handles POST request to `/api/chatbot` with the following JSON payload:
 {
   "message": "Hello, chatbot!"
 }
-Receiving a Response
-The chatbot API will respond with a JSON object containing the chatbot's reply:
 
-json
-Copy code
 {
   "response": "Hi there! How can I assist you today?"
 }
-Contributing
-Contributions are welcome! If you have any ideas, suggestions, or improvements, feel free to open an issue or submit a pull request.
 
-License
-This project is licensed under the MIT License. See the LICENSE file for more details.
-
-vbnet
-Copy code
-
-Feel free to customize and expand on this template to provide more information about your specific project.
 
 
 
