@@ -1,6 +1,7 @@
 import os 
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from flask import jsonify 
+import torch 
 
 from config import (
     MODEL_NAME, 
@@ -18,10 +19,7 @@ def chat(input_message):
     model, tokenizer = load_model()
 
     # Tokenize the input message
-    input_ids = tokenizer.encode(input_message, 
-        return_tensors="pt", 
-        padding=True, 
-        truncation=True)
+    input_ids = tokenizer.encode(input_message, return_tensors="pt")
 
     # Generate a response from the model
     output = model.generate(input_ids, max_length=100)

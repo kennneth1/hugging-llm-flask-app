@@ -6,8 +6,12 @@ app = Flask(__name__)
 # cold load the model and tokenizer
 model, tokenizer = load_model()
 
+@app.route("/")
+def index():
+    return "Welcome to my Flask application!"
+    
 # Define a route for generating responses
-@app.route("/chatbot", methods=["POST"])
+@app.route("/api/chatbot", methods=["GET", "POST"])
 def chatbot():
     # Get the input message from the request
     input_message = request.json["message"]
