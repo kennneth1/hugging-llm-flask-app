@@ -32,7 +32,7 @@ This is a simple chatbot API built with Flask and HuggingFace's GPT-2 LLM, that 
 
 ### Sending a Message
 
-To send a message to the chatbot, make a POST request to `/api/chatbot` with the following JSON payload:
+Handles POST request to `/api/chatbot` with the following JSON payload:
 
 ```json
 {
