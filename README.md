@@ -44,5 +44,3 @@ Handles POST request to `/api/chatbot` with the following JSON payload:
 }
 
 
-
-
