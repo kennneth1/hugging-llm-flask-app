@@ -39,7 +39,7 @@ This is a simple chatbot API built with Flask and HuggingFace's GPT-2 LLM, that 
 ### Sending a Message
 
 Handles POST request to `/api/chatbot` via terminal with this command:
-curl -X POST -H "Content-Type: application/json" -d '{"message": "Hello"}' http://127.0.0.1:5000/api/chatbotwith 
+`curl -X POST -H "Content-Type: application/json" -d '{"message": "Hello"}' http://127.0.0.1:5000/api/chatbotwith`
 
 Or with the following JSON payload:
 
