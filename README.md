@@ -4,17 +4,23 @@ This is a simple chatbot API built with Flask and HuggingFace's GPT-2 LLM, that 
 
 ## Features
 
-- Provides a simple interface for interacting with the chatbot
-- Supports real-time conversation with the chatbot - one-off prompts, retention of prior messages is not yet implemented
-- Handles various user queries and provides relevant responses
+- Simple interface for interacting with the chatbot
+- Engage in one-off Q and A's with the chatbot using the API
+- Serves as a starting point to further explore the development of chatbot APIs using Flask, Python, and language models
 
 ## Technologies Used
 
 - Python
 - Flask
-- HTML
-- Hugging Face's GPT2
-- PyTorch (underlying gpt2)
+- Docker
+- GPT-2
+
+## Important Considerations
+Please note the following caveats regarding the current implementation:
+
+- Limited Conversation History: Presently, the API does not retain a conversation history or support looping. Each interaction is treated as a one-off prompt, without referencing previous messages.
+
+- Latency Concerns: Due to the nature of the underlying model and the computational requirements, there might be latency issues when receiving responses. We are continuously working to optimize and enhance the API's performance.
 
 ## Getting Started
 
@@ -22,7 +28,7 @@ This is a simple chatbot API built with Flask and HuggingFace's GPT-2 LLM, that 
 2. Navigate to root directory and initalize virtual env
 3. Install the required dependencies: `pip install -r requirements.txt`
 4. Set env var, for MacOS: `export FLASK_APP=main.py`
-5. Run the Flask application: `python main.py`
+5. Run the Flask application: `flask run`
 6. Open your browser and navigate to `http://localhost:5000` or `http://127.0.0.1:5000`
 7. Start chatting with the chatbot!
 
@@ -33,13 +39,13 @@ This is a simple chatbot API built with Flask and HuggingFace's GPT-2 LLM, that 
 
 ## API Endpoints
 
-- `POST /api/chatbot`: Sends a user message to the chatbot and receives a response.
+- POST: `/api/chatbot`: Send a user message to the chatbot and receives a response.
 
 ## Examples
 
 ### Sending a Message
 
-Handles POST request to `/api/chatbot` via terminal with the command:
+Send message to `/api/chatbot` via terminal with the command:
 
 `curl -X POST -H "Content-Type: application/json" -d '{"message": "Hello"}' http://127.0.0.1:5000/api/chatbot`
 
