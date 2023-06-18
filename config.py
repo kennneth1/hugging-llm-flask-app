@@ -1,2 +1,1 @@
-# MODEL_NAME = "microsoft/DialoGPT-medium"
-MODEL_NAME = "gpt2"
+MODEL_NAME = "gpt2-medium"

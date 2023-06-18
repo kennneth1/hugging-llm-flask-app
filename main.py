@@ -1,10 +1,14 @@
 from flask import Flask, request, render_template
-from utils.preprocessing import load_model, chat
+from utils.preprocessing import load_model, chat, remove_repetition, clean_response
+import os
 
 app = Flask(__name__)
 
 # cold load the model and tokenizer
 model, tokenizer = load_model()
+
+templates_dir = os.path.join(os.getcwd(), "app", "templates")
+app.template_folder = templates_dir
 
 @app.route("/")
 def index():
@@ -14,10 +18,19 @@ def index():
 @app.route("/api/chatbot", methods=["POST"])
 def chatbot():
     # Get the input message from the request
+    
     input_message = request.json["message"]
+    print("Received message:", input_message)
 
     # Return response
     response = chat(input_message)
+    response = response.get("response", "")  # Extract the "response" value
+    print("Generated response:", response)
+
+    response = remove_repetition(response)
+    response = clean_response(response)
+    print("Cleaned response:", response)
+
     return response
 
 # Run the Flask application
