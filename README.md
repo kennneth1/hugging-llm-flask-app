@@ -49,14 +49,3 @@ It is recommended to deploy to EC2 or ECS to support the high-compute inferencin
 Send message to `/api/chatbot` via terminal with the command:
 
 `curl -X POST -H "Content-Type: application/json" -d '{"message": "Hello"}' http://127.0.0.1:5000/api/chatbot`
-
-Or with the following JSON payload:
-
-```json
-{
-  "message": "Hello, chatbot!"
-}
-
-{
-  "response": "Hi there! How can I assist you today?"
-}
