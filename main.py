@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-from utils.preprocessing import load_model, chat, remove_repetition, clean_response
+from utils.preprocessing import load_model, chat, filter_repetitive_responses
 import os
 
 app = Flask(__name__)
@@ -26,10 +26,6 @@ def chatbot():
     response = chat(input_message)
     response = response.get("response", "")  # Extract the "response" value
     print("Generated response:", response)
-
-    response = remove_repetition(response)
-    response = clean_response(response)
-    print("Cleaned response:", response)
 
     return response
 
