@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 from utils.preprocessing import load_model, chat
 
 app = Flask(__name__)
@@ -8,7 +8,7 @@ model, tokenizer = load_model()
 
 @app.route("/")
 def index():
-    return "Welcome to my Flask application!"
+    return render_template("index.html")
     
 # Define a route for generating responses
 @app.route("/api/chatbot", methods=["GET", "POST"])
