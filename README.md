@@ -46,6 +46,6 @@ It is recommended to deploy to EC2 or ECS to support the high-compute inferencin
 
 ### Sending a Message
 
-Send message to `/api/chatbot` via terminal with the command:
+After "Getting Started" or running your docker image, send message to `/api/chatbot` via terminal with the command:
 
 `curl -X POST -H "Content-Type: application/json" -d '{"message": "Hello"}' http://127.0.0.1:5000/api/chatbot`
