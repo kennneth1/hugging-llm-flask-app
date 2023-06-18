@@ -49,4 +49,7 @@ Handles POST request to `/api/chatbot` with the following JSON payload:
   "response": "Hi there! How can I assist you today?"
 }
 
+This can be done via terminal:
+curl -X POST -H "Content-Type: application/json" -d '{"message": "Hello"}' http://127.0.0.1:5000/api/chatbot
+
 
