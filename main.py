@@ -11,7 +11,7 @@ def index():
     return render_template("index.html")
     
 # Define a route for generating responses
-@app.route("/api/chatbot", methods=["GET", "POST"])
+@app.route("/api/chatbot", methods=["POST"])
 def chatbot():
     # Get the input message from the request
     input_message = request.json["message"]
