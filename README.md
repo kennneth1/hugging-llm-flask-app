@@ -1,6 +1,6 @@
 # Chatbot API
 
-This is a simple chatbot API built with Flask and HuggingFace's GPT-2 LLM, that allows users to submit messages and receive responses via simple frontend.
+This is a minimalistic chatbot API built with Flask and HuggingFace's GPT-2 LLM, that allows users to submit messages and receive responses via simple frontend.
 
 ## Features
 
@@ -18,9 +18,9 @@ This is a simple chatbot API built with Flask and HuggingFace's GPT-2 LLM, that 
 ## Important Considerations
 Please note the following caveats regarding the current implementation:
 
-- Limited Conversation History: Presently, the API does not retain a conversation history or support looping. Each interaction is treated as a one-off prompt, without referencing previous messages.
+- Limited Conversation History: Presently, the API does not retain a conversation history or support looping. Each interaction is treated as a one-off prompt, without referencing previous messages
 
-- Latency Concerns: Due to the nature of the underlying model and the computational requirements, there might be latency issues when receiving responses. We are continuously working to optimize and enhance the API's performance.
+- Latency Concerns: Due to the nature of the underlying model and the computational requirements to support its tuning, there may be excessive latency when receiving responses. We are continuously working to optimize and enhance the API's performance
 
 ## Getting Started
 
@@ -36,6 +36,7 @@ Please note the following caveats regarding the current implementation:
 - docker build -t hugging-gpt2-flask-app .
 - docker run -p 5000:5000 hugging-gpt2-flask-app
 
+It is recommended to deploy to EC2 or ECS to support the high-compute inferencing needs.
 
 ## API Endpoints
 
