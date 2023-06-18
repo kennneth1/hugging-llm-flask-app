@@ -27,7 +27,7 @@ def chatbot():
     response = response.get("response", "")  # Extract the "response" value
     print("Generated response:", response)
 
-    response = clean_response(response)
+    response = clean_response(response, input_message)
     print("Cleaned response:", response)
 
     return response
