@@ -13,8 +13,8 @@ This is a simple chatbot API built with Flask and HuggingFace's GPT-2 LLM, that 
 - Python
 - Flask
 - HTML
-- JavaScript
-- jQuery
+- Hugging Face's GPT2
+- PyTorch (underlying gpt2)
 
 ## Getting Started
 
