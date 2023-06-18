@@ -26,6 +26,7 @@ This is a simple chatbot API built with Flask and HuggingFace's GPT-2 LLM, that 
 6. Open your browser and navigate to `http://localhost:5000` or `http://127.0.0.1:5000`
 7. Start chatting with the chatbot!
 
+## Using Docker container
 - docker build -t hugging-gpt2-flask-app .
 - docker run -p 5000:5000 hugging-gpt2-flask-app
 
@@ -38,8 +39,9 @@ This is a simple chatbot API built with Flask and HuggingFace's GPT-2 LLM, that 
 
 ### Sending a Message
 
-Handles POST request to `/api/chatbot` via terminal with this command:
-`curl -X POST -H "Content-Type: application/json" -d '{"message": "Hello"}' http://127.0.0.1:5000/api/chatbotwith`
+Handles POST request to `/api/chatbot` via terminal with the command:
+
+`curl -X POST -H "Content-Type: application/json" -d '{"message": "Hello"}' http://127.0.0.1:5000/api/chatbot`
 
 Or with the following JSON payload:
 
@@ -51,7 +53,3 @@ Or with the following JSON payload:
 {
   "response": "Hi there! How can I assist you today?"
 }
-
-
-
-
