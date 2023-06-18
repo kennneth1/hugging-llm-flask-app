@@ -1,10 +1,10 @@
 # Chatbot API
 
-This is a simple chatbot API built with Flask and HuggingFace's GPT-2 LLM, that allows users to submit messages and receive responses.
+This is a simple chatbot API built with Flask and HuggingFace's GPT-2 LLM, that allows users to submit messages and receive responses via simple frontend.
 
 ## Features
 
-- Provides a user-friendly interface for interacting with the chatbot
+- Provides a simple interface for interacting with the chatbot
 - Supports real-time conversation with the chatbot - one-off prompts, retention of prior messages is not yet implemented
 - Handles various user queries and provides relevant responses
 
