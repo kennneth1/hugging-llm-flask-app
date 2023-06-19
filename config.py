@@ -1,1 +1,3 @@
 MODEL_NAME = "gpt2-medium"
+NUM_BEAMS = 5
+NO_REPEAT_NGRAM_SIZE=2
