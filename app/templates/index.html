@@ -93,11 +93,11 @@
             // Check which button triggered the form submission
         var submitButton = event.submitter;
         if (submitButton.id === "submitButton") {
-          xhr.open("POST", "/api/custom-endpoint"); // Specify the endpoint for the custom functionality
+          xhr.open("POST", "/api/gpt2-chatbot"); // Specify the endpoint for the gpt2 llm
         } else if (submitButton.id === "otherButton") {
-          xhr.open("POST", "/api/hugging-endpoint"); // Specify the endpoint for the Hugging Face functionality
+          xhr.open("POST", "/api/dialo-chatbot"); // Specify the endpoint for the dialo llm
         }
-        
+
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.onreadystatechange = function() {
           if (xhr.readyState === 4) {
