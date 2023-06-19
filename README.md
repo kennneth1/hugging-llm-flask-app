@@ -1,6 +1,6 @@
 # Chatbot API
 
-This is a minimalistic chatbot API built with Flask and HuggingFace's GPT-2 LLM, that allows users to submit messages and receive responses via simple frontend.
+This is a minimalistic chatbot API built with Flask and HuggingFace's LLMs, that allows users to submit messages and receive responses via simple frontend.
 
 ## Features
 
@@ -40,12 +40,12 @@ It is recommended to deploy to EC2 or ECS to support the high-compute inferencin
 
 ## API Endpoints
 
-- POST: `/api/chatbot`: Send a user message to the chatbot and receives a response.
+- POST: `/api/gpt2-chatbot` or `/api/dialo-chatbot`: Send a user message to the chatbot and receives a response.
 
 ## Examples
 
 ### Sending a Message
 
-After "Getting Started" or running your docker image, send message to `/api/chatbot` via terminal with the command:
+After "Getting Started" or running your docker image, send message via terminal with:
 
-`curl -X POST -H "Content-Type: application/json" -d '{"message": "Hello"}' http://127.0.0.1:5000/api/chatbot`
+`curl -X POST -H "Content-Type: application/json" -d '{"message": "Hello"}' http://127.0.0.1:5000/api/gpt2-chatbot` or substitute gpt2 with a supported LLM of your choice.
