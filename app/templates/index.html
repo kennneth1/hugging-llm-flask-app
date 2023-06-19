@@ -63,7 +63,8 @@
   <div id="container">
     <form id="myForm">
       <input type="text" name="message" placeholder="Enter your message">
-      <button type="submit" id="submitButton">Submit</button>
+      <button type="submit" id="submitButton">Submit via custom endpoint</button>
+      <button type="submit" id="otherButton">Submit via hugging endpoint</button>
     </form>
 
     <div id="responseBox"></div>
@@ -88,7 +89,15 @@
         }
 
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "/api/chatbot");
+
+            // Check which button triggered the form submission
+        var submitButton = event.submitter;
+        if (submitButton.id === "submitButton") {
+          xhr.open("POST", "/api/custom-endpoint"); // Specify the endpoint for the custom functionality
+        } else if (submitButton.id === "otherButton") {
+          xhr.open("POST", "/api/hugging-endpoint"); // Specify the endpoint for the Hugging Face functionality
+        }
+        
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.onreadystatechange = function() {
           if (xhr.readyState === 4) {

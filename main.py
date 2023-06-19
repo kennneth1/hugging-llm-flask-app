@@ -14,8 +14,8 @@ app.template_folder = templates_dir
 def index():
     return render_template("index.html")
     
-# Define a route for generating responses
-@app.route("/api/chatbot", methods=["POST"])
+# Handle POST requests to the custom chatbot endpoint
+@app.route("/api/custom-endpoint", methods=["POST"])
 def chatbot():
     # Get the input message from the request
     
@@ -31,6 +31,11 @@ def chatbot():
     print("Cleaned response:", response)
 
     return response
+
+# Handle POST requests to hugging face's inference endpoint
+@app.route("/api/hugging-endpoint", methods=["POST"])
+def chatbot_with_hugging():
+    return "404: Not yet implemented"
 
 # Run the Flask application
 if __name__ == "__main__":
