@@ -102,6 +102,7 @@
         xhr.onreadystatechange = function() {
           if (xhr.readyState === 4) {
             if (xhr.status === 200) {
+              responseBox.textContent = "";
               responseBox.textContent = xhr.responseText;
             } else {
               console.error(xhr.status + " " + xhr.statusText);

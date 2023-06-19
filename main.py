@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-from utils.custom_preprocessing import clean_response, load_model, chat
+from utils.custom_preprocessing import chat
 import os
 
 app = Flask(__name__)
@@ -23,8 +23,6 @@ def gpt2_chatbot():
     response = response.get("response", "")  # Extract the "response" value
     print("Generated response:", response)
 
-    response = clean_response(response, input_message)
-    print("Cleaned response:", response)
 
     return response
 
@@ -39,9 +37,6 @@ def dialo_chatbot():
     response = chat(input_message, "microsoft/DialoGPT-medium")
     response = response.get("response", "")  # Extract the "response" value
     print("Generated response:", response)
-
-    response = clean_response(response, input_message)
-    print("Cleaned response:", response)
 
     return response
 
