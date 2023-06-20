@@ -20,7 +20,7 @@ Please note the following caveats regarding the current implementation:
 
 - Limited Conversation History: Presently, the API does not retain a conversation history or support looping. Each interaction is treated as a one-off prompt, without referencing previous messages
 
-- Latency Concerns: Due to the nature of the underlying model and the computational requirements to support its tuning, there may be excessive latency when receiving responses. We are continuously working to optimize and enhance the API's performance
+- Latency Concerns: Due to the nature of the underlying model, lack of caching, and the computational requirements to support its tuning/inference, there may be excessive latency when receiving responses. We are continuously working to optimize and enhance the API's performance
 
 ## Getting Started
 
