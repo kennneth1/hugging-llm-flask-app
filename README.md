@@ -4,9 +4,10 @@ This is a minimalistic chatbot API built with Flask and HuggingFace's LLMs, that
 
 ## Features
 
+- Serves as a starting point to further explore the development of chatbot APIs using Flask, Python, and language models
 - Simple interface for interacting with 1 of 2 LLMs (GPT2 or Dialo)
 - Engage in one-off Q and A's with the chatbot using the API
-- Serves as a starting point to further explore the development of chatbot APIs using Flask, Python, and language models
+
 
 ## Technologies Used
 
@@ -20,7 +21,7 @@ Please note the following caveats regarding the current implementation:
 
 - Limited Conversation History: Presently, the API does not retain a conversation history or support looping. Each interaction is treated as a one-off prompt, without referencing previous messages
 
-- Latency Concerns: Due to the nature of the underlying model, lack of caching, and the computational requirements to support its tuning/inference, there may be excessive latency when receiving responses. We are continuously working to optimize and enhance the API's performance
+- Latency Concerns: Due to the nature of the underlying model, lack of caching, and the computational requirements to support its tuning/inference, there may be excessive latency when receiving responses
 
 ## Getting Started
 
