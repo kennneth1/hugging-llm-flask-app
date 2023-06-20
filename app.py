@@ -1,11 +1,7 @@
 from flask import Flask, request, render_template
 from utils.custom_preprocessing import chat
-import os
 
 app = Flask(__name__)
-
-templates_dir = os.path.join(os.getcwd(), "app", "templates")
-app.template_folder = templates_dir
 
 
 @app.route("/")
