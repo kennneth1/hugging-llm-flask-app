@@ -5,8 +5,7 @@ This is a minimalistic chatbot API built with Flask and HuggingFace's LLMs, that
 ## Features
 
 - Serves as a starting point to further explore the development of chatbot APIs using Flask, Python, and language models
-- Simple interface for interacting with 1 of 2 LLMs (GPT2 or Dialo)
-- Engage in one-off Q and A's with the chatbot using the API
+- Simple interface for one-off interacting against 1 of 2 LLMs (GPT2 or Dialo)
 
 
 ## Technologies Used
