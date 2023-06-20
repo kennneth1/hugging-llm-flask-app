@@ -27,7 +27,7 @@ Please note the following caveats regarding the current implementation:
 1. Clone the repository: `git clone https://github.com/kennneth1/hugging-llm-flask-app.git`
 2. Navigate to root directory and initalize virtual env
 3. Install the required dependencies: `pip install -r requirements.txt`
-4. Set env var, for MacOS: `export FLASK_APP=main.py`
+4. Set env var, for MacOS: `export FLASK_APP=app.py`
 5. Run the Flask application: `flask run`
 6. Open your browser and navigate to `http://localhost:5000` or `http://127.0.0.1:5000`
 7. Start chatting with the chatbot!
